@@ -11,6 +11,7 @@ public class ATMDispenseChain implements DispenseChain {
         DispenseChain c4 = new Peso100Dispenser();
         DispenseChain c5 = new Peso50Dispenser();
         DispenseChain c6 = new Peso20Dispenser();
+        DispenseChain c7 = new Peso10Dispenser();
 
         // Set chain (largest to smallest)
         c1.setNextChain(c2);
@@ -18,6 +19,7 @@ public class ATMDispenseChain implements DispenseChain {
         c3.setNextChain(c4);
         c4.setNextChain(c5);
         c5.setNextChain(c6);
+        c6.setNextChain(c7);
 
         this.nextChain = c1;
     }
